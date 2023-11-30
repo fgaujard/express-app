@@ -1,4 +1,4 @@
-# 🚀 Quête Express 3 [Semaine 12]
+# 🚀 Quête Express 1.2 [Semaine 12]
 
 **_par Flavien GAUJARD_**
 
