@@ -17,10 +17,20 @@ _Si vous avez déjà la database et qu'elle contient une table "**movies**" et u
 
     npx nodemon database.js
 
-## III - Lancer le serveur
+## III - Création du fichier .env
+
+```js
+DB_HOST = localhost;
+DB_PORT = 3306;
+DB_USER = username;
+DB_PASSWORD = password;
+DB_NAME = express_quests;
+```
+
+## IV - Lancer le serveur
 
     npm run dev
 
-## IV - Lancer les tests
+## V - Lancer les tests
 
     npm run test
