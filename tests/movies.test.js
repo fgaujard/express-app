@@ -39,11 +39,11 @@ describe("GET /api/movies/:id", () => {
 describe("POST /api/movies", () => {
   it("should return created movie", async () => {
     const newMovie = {
-      title: "Star Wars",
-      director: "George Lucas",
-      year: "1977",
-      color: "1",
-      duration: 120,
+      title: "XXXXX",
+      director: "XXXXX",
+      year: "XXXX",
+      color: "X",
+      duration: 0,
     };
 
     // if can add
@@ -76,5 +76,70 @@ describe("POST /api/movies", () => {
       .send(movieWithMissingProps);
 
     expect(response.status).toEqual(500);
+  });
+});
+
+// If correctly creat & update
+
+describe("PUT /api/movies/:id", () => {
+  it("should edit movie", async () => {
+    const newMovie = {
+      title: "XXXXX",
+      director: "XXXXX",
+      year: "XXXX",
+      color: "X",
+      duration: 0,
+    };
+
+    const [result] = await database.query(
+      "INSERT INTO movies(title, director, year, color, duration) VALUES (?, ?, ?, ?, ?)",
+      [
+        newMovie.title,
+        newMovie.director,
+        newMovie.year,
+        newMovie.color,
+        newMovie.duration,
+      ]
+    );
+
+    const id = result.insertId;
+
+    const updatedMovie = {
+      title: "XXXXX",
+      director: "XXXXX",
+      year: "XXXX",
+      color: "X",
+      duration: 0,
+    };
+
+    const response = await request(app)
+      .put(`/api/movies/${id}`)
+      .send(updatedMovie);
+
+    expect(response.status).toEqual(204);
+
+    const [movies] = await database.query(
+      "SELECT * FROM movies WHERE id=?",
+      id
+    );
+
+    const [movieInDatabase] = movies;
+
+    expect(movieInDatabase).toHaveProperty("id");
+
+    expect(movieInDatabase).toHaveProperty("title");
+    expect(movieInDatabase.title).toStrictEqual(updatedMovie.title);
+
+    expect(movieInDatabase).toHaveProperty("director");
+    expect(movieInDatabase.director).toStrictEqual(updatedMovie.director);
+
+    expect(movieInDatabase).toHaveProperty("year");
+    expect(movieInDatabase.year).toStrictEqual(updatedMovie.year);
+
+    expect(movieInDatabase).toHaveProperty("color");
+    expect(movieInDatabase.color).toStrictEqual(updatedMovie.color);
+
+    expect(movieInDatabase).toHaveProperty("duration");
+    expect(movieInDatabase.duration).toStrictEqual(updatedMovie.duration);
   });
 });

@@ -8,14 +8,20 @@
 
 ## II - Si vous n'avez pas la Database
 
-_Si vous avez déjà la database et qu'elle contient une table "**movies**" et une table "**users**" vous pouvez éventuellement passez ces étapes. 😉_
+_Si vous avez déjà la database "**express_quests**" et qu'elle contient une table "**movies**" et une table "**users**" vous pouvez éventuellement passez ces étapes. 😉_
+
+**1. Connection à MySQL :**
+
+    mysql -u username -p
+
+**2. Puis créer une base de donnée et se placer dessus :**
 
     CREATE DATABASE express_quests;
     USE express_quests;
 
-### Puis :
+**3. Puis :**
 
-    npx nodemon database.js
+    source express_quests.sql
 
 ## III - Création du fichier .env
 
