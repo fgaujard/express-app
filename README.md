@@ -6,10 +6,6 @@
 
     npm install
 
-## II - Lancer le serveur
-
-    npm run dev
-
-## III - Lancer les tests
+## II - Lancer les tests
 
     npm run test
