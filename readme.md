@@ -1,4 +1,4 @@
-# Quête Express 3 [Semaine 12]
+# 🚀 Quête Express 3 [Semaine 12]
 
 **_par Flavien GAUJARD_**
 
@@ -15,7 +15,7 @@
 
     npx nodemon database.js
 
-si vous avez déja la database avec des valeurs vous pouvez éventuellement passez ces étapes.
+Si vous avez déja la database avec des valeurs vous pouvez éventuellement passez ces étapes. 😉
 
 ## Lancer le serveur
 
