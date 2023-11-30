@@ -8,14 +8,14 @@
 
 ## Si vous n'avez pas la Database
 
+_Si vous avez déja la database avec des valeurs vous pouvez éventuellement passez ces étapes. 😉_
+
     CREATE DATABASE express_quests;
     USE express_quests;
 
 ### Puis :
 
     npx nodemon database.js
-
-Si vous avez déja la database avec des valeurs vous pouvez éventuellement passez ces étapes. 😉
 
 ## Lancer le serveur
 
