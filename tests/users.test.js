@@ -6,9 +6,9 @@ const database = require("../database");
 
 afterAll(() => database.end());
 
-describe("GET /api/movies", () => {
-  it("should return all movies", async () => {
-    const response = await request(app).get("/api/movies");
+describe("GET /api/users", () => {
+  it("should return all users", async () => {
+    const response = await request(app).get("/api/users");
 
     expect(response.headers["content-type"]).toMatch(/json/);
 
@@ -16,17 +16,17 @@ describe("GET /api/movies", () => {
   });
 });
 
-describe("GET /api/movies/:id", () => {
-  it("should return one movie", async () => {
-    const response = await request(app).get("/api/movies/1");
+describe("GET /api/users/:id", () => {
+  it("should return one user", async () => {
+    const response = await request(app).get("/api/users/1");
 
     expect(response.headers["content-type"]).toMatch(/json/);
 
     expect(response.status).toEqual(200);
   });
 
-  it("should return no movie", async () => {
-    const response = await request(app).get("/api/movies/0");
+  it("should return no user", async () => {
+    const response = await request(app).get("/api/users/0");
 
     expect(response.status).toEqual(404);
   });
