@@ -8,7 +8,7 @@
 
 ## II - Si vous n'avez pas la Database
 
-_Si vous avez déjà la database et qu'elle contient une table **movies** et une table **users** vous pouvez éventuellement passez ces étapes. 😉_
+_Si vous avez déjà la database et qu'elle contient une table "**movies**" et une table "**users**" vous pouvez éventuellement passez ces étapes. 😉_
 
     CREATE DATABASE express_quests;
     USE express_quests;
