@@ -2,11 +2,11 @@
 
 **_par Flavien GAUJARD_**
 
-## Initialiser l'application express avec :
+## I - Initialiser l'application express avec :
 
     npm install
 
-## Si vous n'avez pas la Database
+## II - Si vous n'avez pas la Database
 
 _Si vous avez déja la database avec des valeurs vous pouvez éventuellement passez ces étapes. 😉_
 
@@ -17,10 +17,10 @@ _Si vous avez déja la database avec des valeurs vous pouvez éventuellement pas
 
     npx nodemon database.js
 
-## Lancer le serveur
+## III - Lancer le serveur
 
     npm run dev
 
-## Lancer les tests
+## IV - Lancer les tests
 
     npm run test
