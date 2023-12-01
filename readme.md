@@ -19,7 +19,7 @@ _Si vous avez déjà la database "**express_quests**" et qu'elle contient une ta
     CREATE DATABASE express_quests;
     USE express_quests;
 
-**3. Puis :**
+**3. Puis générer les tables "movies" et "users" :**
 
     source express_quests.sql
 
